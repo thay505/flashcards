@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eaf4ff;
+  color: #17324d;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho {
+  background-color: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+.cabecalho h1 {
+  margin-bottom: 8px;
+}
+
+.conteudo {
+  flex: 1;
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.contador {
+  margin-bottom: 15px;
+  color: #54708c;
+}
+
+.cartao {
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cartao-interno {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.cartao.virado .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+.cartao-frente,
+.cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 30px;
+  background-color: white;
+  border: 2px solid #90caf9;
+  box-shadow: 0 8px 18px rgba(21, 101, 192, 0.15);
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartao-frente span,
+.cartao-verso span {
+  margin-bottom: 20px;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.cartao-frente h2 {
+  font-size: 28px;
+}
+
+.cartao-verso {
+  transform: rotateY(180deg);
+}
+
+.cartao-verso p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.botoes {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1976d2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+.rodape {
+  background-color: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+@media (max-width: 500px) {
+  .cartao {
+    height: 260px;
+  }
+
+  .cartao-frente h2 {
+    font-size: 23px;
+  }
+
+  .cartao-verso p {
+    font-size: 19px;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+}

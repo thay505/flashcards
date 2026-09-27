@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards de Estudos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <h1>Flashcards de Estudos</h1>
+    <p>Clique no cartão para ver a resposta.</p>
+  </header>
+
+  <main class="conteudo">
+    <p id="contador" class="contador">1 / 6</p>
+
+    <article id="cartao" class="cartao">
+      <div class="cartao-interno">
+
+        <div class="cartao-frente">
+          <span>Pergunta</span>
+          <h2 id="pergunta">O que é HTML?</h2>
+        </div>
+
+        <div class="cartao-verso">
+          <span>Resposta</span>
+          <p id="resposta">
+            HTML é a linguagem usada para estruturar uma página web.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <div class="botoes">
+      <button id="botaoVirar">Mostrar resposta</button>
+      <button id="botaoProximo">Próximo</button>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto de Flashcards</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
